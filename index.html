@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Yudha Pratama</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="home-page">
+    <nav class="navbar">
+        <div class="logo">Portofolio</div>
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="about.html">Tentang</a></li>
+            <li><a href="projects.html">Proyek</a></li>     
+            <li><a href="contact.html">Kontak</a></li>    
+        </ul>
+    </nav>
+
+    <section class="home">
+        <div class="overlay"></div>
+        <div class="hero-text">
+            <h1> Halo, Nama Saya <span> Yudha Pratama <span></h1>
+            <p>
+                Selamat datang di portofolio saya. Saya merupakan seorang fresh graduate 
+                dengan semangat belajar yang tinggi, mampu bekerja secara individu maupun 
+                dalam tim, serta memiliki ketertarikan untuk terus berkembang. Saat ini, 
+                saya sedang mencari kesempatan kerja untuk mengembangkan kemampuan dan 
+                memberikan kontribusi terbaik bagi perusahaan maupun lingkungan kerja.
+            </p>
+            <div class="hero-btn">
+                <a href="CV Yudha Pratama.pdf" download class="btn"><i class="fa-solid fa-download"></i> Unduh CV</a>
+                <a href="contact.html" class="btn btn-outline"><i class="fas fa-envelope"></i> Kontak Saya</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    menuToggle.addEventListener("click", () => {
+
+        navLinks.classList.toggle("active");
+
+    });
+
+    /* Auto Close */
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navLinks.classList.remove("active");
+
+        });
+
+    });
+
+    </script>
+
+</body>
+</html>
